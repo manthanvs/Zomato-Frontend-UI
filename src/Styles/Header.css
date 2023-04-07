@@ -1,0 +1,31 @@
+.c-header {
+	position: relative;
+	right: 10px;
+}
+
+a {
+	font-family: "Poppins", sans-serif;
+	padding: 7px;
+	margin-right: 5px;
+	position: relative;
+	top:1px
+}
+
+p {
+	font-family: "Poppins", sans-serif;
+	text-shadow: 50%;
+}
+
+#login {
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	padding: 7px;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+}
+
+#createac {
+	font-family: "Poppins", sans-serif;
+	margin-top: 2px;
+}
