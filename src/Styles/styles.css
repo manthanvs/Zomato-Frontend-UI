@@ -43,7 +43,7 @@ nav {
 
 .banner {
 	height: 450px;
-	background: url("../../public/Images/Home_Pic.png");
+	background: url("../../public/Home_Pic.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
