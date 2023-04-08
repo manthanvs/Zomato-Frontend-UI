@@ -5,23 +5,21 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './Components/header/Header.component';
 import Home from './Components/home/home.component';
-// import Details from './Components/details/details.component';
-// import Filter from './Components/filter/Filter.component';
+import Details from './Components/details/details.component';
 import Footer from './Components/footer/Footer.component';
 
 
-import ListingPage from './Components/Listing/ListingPage';
-import RestaurantPage from "./Components/RestaurantPage/RestPage";
-import PlaceOrder from "./Components/Orders/PlaceOrder";
-import ViewOrder from "./Components/Orders/ViewOrder";
+import ListingPage from './Components/Listing/ListingPage.component';
+import RestaurantPage from "./Components/RestaurantPage/RestPage.component";
+import PlaceOrder from "./Components/Orders/PlaceOrder.component";
+import ViewOrder from "./Components/Orders/ViewOrder.component";
 
 function Router() {
     return (
         <BrowserRouter>
             <Header />
             <Route exact path="/" component={Home}></Route>
-            {/*<Route path="/restaurantdetailspage" component={Details} />
-            <Route path="/restaurantsearchpage" component={Filter} />*/}
+            <Route path="/restaurantdetailspage" component={Details} />
 
             <Route path="/listing/:mealType" component={ListingPage}></Route>
             <Route path="/restpage/:restid" component={RestaurantPage}></Route>

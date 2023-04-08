@@ -27,7 +27,6 @@ export default class Header extends React.Component {
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent"
-
 						data-toggle="collapse"
 						data-target=".navbar-collapse"
 						aria-expanded="false"
@@ -47,10 +46,11 @@ export default class Header extends React.Component {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link"
-								href="#footer"
-								tabIndex="-1"
-								aria-disabled="true">
+								<a
+									className="nav-link"
+									href="#footer"
+									tabIndex="-1"
+									aria-disabled="true">
 									About
 								</a>
 							</li>
@@ -64,28 +64,23 @@ export default class Header extends React.Component {
 								</a>
 							</li>
 						</ul>
-            
-            <div className="container c-header d-flex justify-content-end">
-            <div className="btn-group">
-				
-              <a
-                href="/"
-                className="link-light"
-                id="login"
-                >Login</a>
-    
-              <button
-                type="button"
-                className="btn btn-outline-light btn-text"
-                id="createac"
-                >
-                Create An Account
-              </button>
-            </div>
 
-          </div>
-        </div>
-      </div>
+						<div className="container c-header d-flex justify-content-end">
+							<div className="btn-group">
+								<a href="/" className="link-light" id="login">
+									Login
+								</a>
+
+								<button
+									type="button"
+									className="btn btn-outline-light btn-text"
+									id="createac">
+									Create An Account
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</nav>
 		);
 	}

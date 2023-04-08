@@ -1,5 +1,5 @@
 import { Component } from "react";
-import StarRatingComponent from "../../Home/StarCompo/StarComponent";
+import StarRatingComponent from "../../Home/StarCompo/StarComponent.component";
 
 class MenuCard extends Component {
   constructor(props) {

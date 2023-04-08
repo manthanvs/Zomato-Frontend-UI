@@ -17,7 +17,7 @@ class Details extends React.Component {
 		const restaurant_id = qs.restaurant;
 		axios({
 			method: "GET",
-			url: `http://localhost:3000/restaurants/getRestaurantById/${restaurant_id}`,
+			url: `https://zomatowebmicroservices.onrender.com/restaurants/getRestaurantById/${restaurant_id}`,
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) =>
@@ -25,6 +25,8 @@ class Details extends React.Component {
 			)
 			.catch();
 	}
+
+	handlelocationorder = (restaurant_fetch_id) => {this.props.history.push(`/restpage/${restaurant_fetch_id.restaurant_id}`);};
 
 	render() {
 		const { restaurantData } = this.state;
@@ -38,9 +40,12 @@ class Details extends React.Component {
 						alt=""
 					/>
 				</div>
+				<div className="container">
 				<h1 className="DetailHeader">
 					{restaurantData.restaurant_name}
-				</h1>
+					</h1>
+					<button type="button" className="btn btn-outline-danger btn1" onClick={()=>{this.handlelocationorder(restaurantData)}} > Place Your Order</button>
+				</div>
 				<div className="tabs">
 					<div className="tab">
 						<input
@@ -84,7 +89,6 @@ class Details extends React.Component {
 				
 
 
-					
 				</div>
 		);
 	}

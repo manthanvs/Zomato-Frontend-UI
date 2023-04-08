@@ -27,8 +27,20 @@
  }
 
 .DetailHeader{
-    color: #192f60;margin-left: 113px;font-size: 30px;font-family: Poppins;margin-top:40px;margin-bottom: 100px;font-weight: 600;
+  color: #192f60;
+  font-size: 30px;
+  font-family: Poppins;
+  margin: 40px 430px 60px 110px;
+  font-weight: 600;
 }
+.btn1 {
+  margin: -10% 5% 5% 75%;
+}
+
+.btn2 {
+  float: right;
+}
+
 .resName{
   clear: right;
   font-style: oblique;
@@ -370,6 +382,3 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   left: "5px";
   width: "20px";
 }
-.btn{
-  float: right;
-  ;}

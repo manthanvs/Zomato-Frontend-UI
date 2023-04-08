@@ -69,7 +69,7 @@ class RestMenu extends Component {
               <div className="price-detail">
                 <p className="fw-bold rating">
                   <StarRatingComponent />
-                  {/* {(rating = Math.floor(Math.random() * (6 - 1) + 1))} */}
+                 {/*{(rating = Math.floor(Math.random() * (6 - 1) + 1))}*/}
                   {this.ratingArray[i]}
                 </p>
                 <p>₹{item.menu_price}</p>
@@ -128,7 +128,7 @@ class RestMenu extends Component {
           <div className=" item-cart">
             <h4 className="fw-bold mb-2 text-start ms-3 mt-3">
               Cart
-              {/* {this.num} */}
+              {this.num}
               <i className="fa-solid fa-kitchen-set"></i>
             </h4>
             {this.cartDisplay(this.state.menud)}

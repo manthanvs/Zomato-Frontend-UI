@@ -30,14 +30,14 @@ componentDidMount() {
     axios(
         {
             method: 'GET',
-            url: 'http://localhost:3000/citylist/locations',
+            url: 'https://zomatowebmicroservices.onrender.com/citylist/locations',
             headers: { 'Content-Type': 'application/json' }
         }
     ).then(response => this.setState({ locationValues: response.data })).catch()
     axios(
         {
             method: 'GET',
-            url: 'http://localhost:3000/restaurants/getRestaurants',
+            url: 'https://zomatowebmicroservices.onrender.com/restaurants/getRestaurants',
             headers: { 'Content-Type': 'application/json' }
         }
     ).then(response => this.setState({ restaurantData: response.data })).catch()
@@ -51,9 +51,9 @@ componentDidMount() {
     let cuisineId = event.target.value;
     let cuisineUrl = "";
     if (cuisineId === "") {
-      cuisineUrl = `http://localhost:3000/filters/getbyonlymeal/${mealId}`;
+      cuisineUrl = `https://zomatowebmicroservices.onrender.com/filters/getbyonlymeal/${mealId}`;
     } else {
-      cuisineUrl = `http://localhost:3000/filters/getbymeal/${mealId}?cuisineid=${cuisineId}`;
+      cuisineUrl = `https://zomatowebmicroservices.onrender.com/filters/getbymeal/${mealId}?cuisineid=${cuisineId}`;
     }
     axios({
 			method: "GET",
@@ -74,7 +74,7 @@ componentDidMount() {
 
     axios({
       methhod:"GET",
-      url:`http://localhost:3000/filters/getbymeal/${mealId}?hcost=${hcost}&lcost=${lcost}`,
+      url:`https://zomatowebmicroservices.onrender.com/filters/getbymeal/${mealId}?hcost=${hcost}&lcost=${lcost}`,
       headers: {"Content-Type":"application/json"},
     })
     .then((response)=>this.props.restPerCuisine(response.data))

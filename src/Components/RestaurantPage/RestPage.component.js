@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./RestPage.css";
-import BasicRating from "./Components/RestPageRating";
-import { Link } from "react-router-dom";
-import RestMenu from "./RestMenu";
+import BasicRating from "./Components/RestPageRating.component";
+import RestMenu from "./RestMenu.component";
 
 class RestPage extends Component {
   constructor(props) {
@@ -68,14 +67,8 @@ class RestPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <Link
-                    to={`/listing/${this.state.mealType}?MealId=${this.state.mealId}`}
-                    className="btn btn-danger"
-                  >
-                    Back
-                  </Link>
                   <button
-                    className="btn btn-success ms-2"
+                    className="btn btn-success btn2 ms-2"
                     onClick={this.proceed}
                   >
                     Proceed
@@ -118,7 +111,7 @@ class RestPage extends Component {
 
     axios({
       method:"GET",
-      url:`http://localhost:3000/restaurants/getRestaurantById/${restid}`,
+      url:`https://zomatowebmicroservices.onrender.com/restaurants/getRestaurantById/${restid}`,
       headers:{"Content-Type":"application/json"},
     })
     .then((response)=>this.setState({restdetails:response.data[0]}))
@@ -126,7 +119,7 @@ class RestPage extends Component {
 
     axios({
       method:"GET",
-      url:`http://localhost:3000/menu/getMenuByRestaurantId/${restid}`,
+      url:`https://zomatowebmicroservices.onrender.com/menu/getMenuByRestaurantId/${restid}`,
       headers:{"Content-Type":"application/json"},
     })
     .then((response)=>this.setState({menuData:response.data}))

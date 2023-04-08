@@ -13,7 +13,7 @@ class Wallpaper extends React.Component {
 		const state_id = event.target.value;
 		axios({
 			method: "GET",
-			url: `http://localhost:3000/restaurants/getRestaurantBystateid?state_id=${state_id}`,
+			url: `https://zomatowebmicroservices.onrender.com/restaurants/getRestaurantBystateid?state_id=${state_id}`,
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) => this.setState({ restaurants: response.data }))

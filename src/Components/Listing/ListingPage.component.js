@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Listing.css";
-import Filter from "./Filter";
-import ListingDisplay from "./ListingDisplay";
+import Filter from "./Filter.component";
+import ListingDisplay from "./ListingDisplay.component";
 
 class ListingPage extends Component {
   constructor() {
@@ -54,7 +54,7 @@ class ListingPage extends Component {
     
     axios({
 			method: "GET",
-			url: `http://localhost:3000/restaurants/getRestaurantByMealType?mealid=${mealId}`,
+			url: `https://zomatowebmicroservices.onrender.com/restaurants/getRestaurantByMealType?mealid=${mealId}`,
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) => this.setState({ restaurantList: response.data }))

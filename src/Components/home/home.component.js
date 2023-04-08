@@ -18,7 +18,7 @@ class Home extends React.Component {
 	componentDidMount() {
 		axios({
 			method: "GET",
-			url: "http://localhost:3000/citylist/locations",
+			url: "https://zomatowebmicroservices.onrender.com/citylist/locations",
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) => this.setState({ location: response.data }))
@@ -26,7 +26,7 @@ class Home extends React.Component {
 
 		axios({
 			method: "GET",
-			url: "http://localhost:3000/meals/getMeals",
+			url: "https://zomatowebmicroservices.onrender.com/meals/getMeals",
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) => this.setState({ mealType: response.data }))
@@ -34,7 +34,7 @@ class Home extends React.Component {
 
 		axios({
 			method: "GET",
-			url: "http://localhost:3000/favfood/getFavfood",
+			url: "https://zomatowebmicroservices.onrender.com/favfood/getFavfood",
 			headers: { "Content-Type": "application/json" },
 		})
 			.then((response) => this.setState({ favfood: response.data }))
